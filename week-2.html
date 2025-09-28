@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 2: HTML Elements & Page Structure</title>
+  <style>
+    /* Reset & base */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      margin: 20px auto;
+      max-width: 900px;
+      padding: 0 20px;
+      color: #222;
+      background: #fefefe;
+    }
+
+    h1, h2, h3 {
+      color: #003366;
+    }
+
+    h1 {
+      border-bottom: 3px solid #003366;
+      padding-bottom: 8px;
+    }
+
+    h2 {
+      margin-top: 2em;
+      border-bottom: 2px solid #666;
+      padding-bottom: 6px;
+    }
+
+    h3 {
+      margin-top: 1.5em;
+      color: #00509e;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    ul {
+      margin-left: 1.5em;
+      list-style-type: disc;
+    }
+
+    ol {
+      margin-left: 1.5em;
+      list-style-type: decimal;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2em 0;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.95em;
+      border-radius: 3px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+
+    table, th, td {
+      border: 1px solid #666;
+    }
+
+    th, td {
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #003366;
+      color: white;
+    }
+
+    a {
+      color: #00509e;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Highlighted text (like span with color) */
+    .highlight {
+      color: #00509e;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Week 2: HTML Elements &amp; Page Structure</h1>
+    <p><strong>Duration:</strong> ~3 hours (Can be split into 2 sessions)</p>
+  </header>
+
+  <section>
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Understand and use container elements like <code>&lt;div&gt;</code> and inline elements like <code>&lt;span&gt;</code></li>
+      <li>Create tables and forms using HTML</li>
+      <li>Use semantic HTML5 elements to improve page structure and accessibility</li>
+      <li>Understand the importance of semantic tags for SEO and screen readers</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🧩 Topics Covered</h2>
+
+    <article>
+      <h3>1️⃣ Review of Basic HTML Tags</h3>
+      <p>Quick recap: headings, paragraphs, lists, links, images</p>
+    </article>
+
+    <article>
+      <h3>2️⃣ Containers: <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></h3>
+      <p><code>&lt;div&gt;</code>: block-level container used to group elements for layout and styling</p>
+      <p><code>&lt;span&gt;</code>: inline container used to style parts of text or group inline elements</p>
+
+      <p><strong>Example:</strong></p>
+      <pre><code>&lt;div&gt;
+  &lt;h2&gt;About Me&lt;/h2&gt;
+  &lt;p&gt;I love coding. &lt;span style="color:blue;"&gt;Welcome to my site!&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+    </article>
+
+    <article>
+      <h3>3️⃣ HTML Tables</h3>
+      <p>Structure: <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code></p>
+      <p>When to use tables (tabular data, NOT layout)</p>
+
+      <p><strong>Example table:</strong></p>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>Study HTML</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Practice CSS</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article>
+      <h3>4️⃣ HTML Forms</h3>
+      <p>Purpose: Collect user input</p>
+      <p>Common form elements:</p>
+      <ul>
+        <li><code>&lt;form&gt;</code></li>
+        <li><code>&lt;input&gt;</code> (types: text, email, password, submit, etc.)</li>
+        <li><code>&lt;textarea&gt;</code></li>
+        <li><code>&lt;label&gt;</code></li>
+        <li><code>&lt;select&gt;</code> and <code>&lt;option&gt;</code></li>
+      </ul>
+
+      <p><strong>Basic form example:</strong></p>
+      <pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+</code></pre>
+    </article>
+
+    <article>
+      <h3>5️⃣ Semantic HTML5 Elements</h3>
+      <p><strong>Why semantics matter:</strong> SEO, accessibility, readability</p>
+      <p>Elements and their roles:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code></li>
+        <li><code>&lt;nav&gt;</code></li>
+        <li><code>&lt;section&gt;</code></li>
+        <li><code>&lt;article&gt;</code></li>
+        <li><code>&lt;aside&gt;</code></li>
+        <li><code>&lt;footer&gt;</code></li>
+      </ul>
+
+      <p><strong>Example page structure:</strong></p>
+      <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Article Title&lt;/h2&gt;
+      &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;
+      &lt;h3&gt;Related Links&lt;/h3&gt;
+      &lt;p&gt;Sidebar content...&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/section&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 My Website&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+    </article>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🧪 Activities / Exercises</h2>
+    <ul>
+      <li>Create a webpage using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> to structure content.</li>
+      <li>Build a simple HTML table with your weekly schedule.</li>
+      <li>Create a contact form with name, email, and message fields.</li>
+      <li>Create a basic page layout using semantic HTML tags.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>📝 Homework / Practice</h2>
+    <p>Build a multipurpose HTML page including:</p>
+    <ul>
+      <li>Header with navigation</li>
+      <li>Section with two articles</li>
+      <li>Aside with related info</li>
+      <li>Footer with copyright info</li>
+      <li>A table with some data</li>
+      <li>A simple contact form</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🛠️ Tools Needed</h2>
+    <ul>
+      <li>Code editor (VS Code recommended)</li>
+      <li>Browser for live preview</li>
+    </ul>
+  </section>
+
+
+
+</body>
+</html>

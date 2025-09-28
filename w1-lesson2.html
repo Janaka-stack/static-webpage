@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 2: Static vs Dynamic Websites</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      padding: 40px;
+      max-width: 960px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      margin-top: 2em;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0077cc;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    code {
+      background-color: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .box {
+      background: #f0f8ff;
+      border-left: 4px solid #0077cc;
+      padding: 15px 20px;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+
+    .highlight {
+      color: #2b7a78;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>🧾 Lesson 2: Static vs Dynamic Websites</h1>
+
+  <div class="section">
+    <h2>🕒 Duration:</h2>
+    <p><strong>~30 minutes</strong> (Ideal for the second segment of Week 1)</p>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Learning Objectives:</h2>
+    <ul>
+      <li>Understand what a <strong>static website</strong> is</li>
+      <li>Understand what a <strong>dynamic website</strong> is</li>
+      <li>Identify key differences between static and dynamic websites</li>
+      <li>Recognize when to use each type</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧩 Topics Covered:</h2>
+
+    <h3>📌 2.1 What is a Static Website?</h3>
+    <p>A <strong>static website</strong> is made up of fixed files – mainly <code>HTML</code>, <code>CSS</code>, and possibly <code>JavaScript</code> – that are <em>delivered exactly as they are written</em>.</p>
+
+    <p><strong>Characteristics:</strong></p>
+    <ul>
+      <li>Pre-built pages</li>
+      <li>Same content for every visitor</li>
+      <li>No server-side processing</li>
+      <li>Quick and easy to build</li>
+      <li>Fast loading (less server load)</li>
+    </ul>
+
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Personal portfolio</li>
+      <li>Company "About Us" page</li>
+      <li>Documentation pages</li>
+      <li>Landing pages</li>
+    </ul>
+
+    <h3>🔄 2.2 What is a Dynamic Website?</h3>
+    <p>A <strong>dynamic website</strong> generates content <em>on-the-fly</em> based on user interaction, databases, or external inputs. It uses <strong>server-side languages</strong> and often connects to a <strong>database</strong>.</p>
+
+    <p><strong>Characteristics:</strong></p>
+    <ul>
+      <li>Pages are generated dynamically</li>
+      <li>Content can change per user or over time</li>
+      <li>Uses back-end languages and databases</li>
+      <li>More complex and flexible</li>
+    </ul>
+
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li>Facebook, Twitter</li>
+      <li>E-commerce stores (e.g., Amazon)</li>
+      <li>Online booking systems</li>
+      <li>News sites with real-time updates</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>🔍 2.3 Key Differences Table:</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Static Website</th>
+          <th>Dynamic Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Content</td>
+          <td>Fixed</td>
+          <td>Changes based on interaction</td>
+        </tr>
+        <tr>
+          <td>Technologies</td>
+          <td>HTML, CSS, JS</td>
+          <td>HTML, CSS, JS + backend (PHP, Python, etc.)</td>
+        </tr>
+        <tr>
+          <td>Server-side logic</td>
+          <td>❌ None</td>
+          <td>✅ Yes</td>
+        </tr>
+        <tr>
+          <td>Database</td>
+          <td>❌ Not needed</td>
+          <td>✅ Usually required</td>
+        </tr>
+        <tr>
+          <td>Speed</td>
+          <td>⚡ Very fast</td>
+          <td>🐢 Slightly slower (depends)</td>
+        </tr>
+        <tr>
+          <td>Hosting</td>
+          <td>Simple and cheap</td>
+          <td>Requires more resources</td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td>Portfolios, blogs, docs</td>
+          <td>Social media, dashboards, e-commerce</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🧪 Suggested Activities:</h2>
+
+    <h4>✅ Activity 1: Website Comparison</h4>
+    <ul>
+      <li>Show two websites (one static, one dynamic)</li>
+      <li>Ask students to compare features:
+        <ul>
+          <li>Does it show the same content to everyone?</li>
+          <li>Can users log in or interact?</li>
+          <li>Is data changing in real time?</li>
+        </ul>
+      </li>
+    </ul>
+    <p><strong>Examples:</strong></p>
+    <ul>
+      <li><strong>Static:</strong> <a href="https://getbootstrap.com" target="_blank">getbootstrap.com</a></li>
+      <li><strong>Dynamic:</strong> <a href="https://twitter.com" target="_blank">twitter.com</a></li>
+    </ul>
+
+    <h4>✅ Activity 2: Classify the Website</h4>
+    <p>Give a list of website types. Ask students to classify each as static or dynamic:</p>
+    <ul>
+      <li>Portfolio site → <span class="highlight">Static</span></li>
+      <li>Online store → <span class="highlight">Dynamic</span></li>
+      <li>Company landing page → <span class="highlight">Static</span></li>
+      <li>News website with login → <span class="highlight">Dynamic</span></li>
+      <li>Documentation site → <span class="highlight">Static</span></li>
+    </ul>
+  </div>
+
+  <div class="section box">
+    <h2>📝 Key Takeaways:</h2>
+    <ul>
+      <li><strong>Static websites</strong> are ideal for simple, fast-loading pages with fixed content.</li>
+      <li><strong>Dynamic websites</strong> allow user interaction, personalization, and real-time content.</li>
+      <li>Static websites are the foundation of web development and perfect for beginners.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📁 Optional Bonus:</h2>
+    <p>Briefly introduce the idea of <strong>Static Site Generators</strong> (e.g., Jekyll, Hugo, Eleventy) for advanced learners. These tools generate static pages dynamically at build time — offering flexibility and performance without server-side complexity.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 5: Styling a Complete Web Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+
+    h1, h2, h3 {
+      color: #2a4d69;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 0.5em;
+      padding-bottom: 0.3em;
+      border-bottom: 3px solid #2a4d69;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3em;
+      margin-top: 2em;
+    }
+
+    h3 {
+      margin-top: 1.2em;
+      color: #1b3b72;
+    }
+
+    p {
+      margin: 0.8em 0;
+    }
+
+    ul, ol {
+      margin-left: 1.4em;
+      margin-bottom: 1em;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1.5em 0;
+    }
+
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+
+    th {
+      background-color: #2a4d69;
+      color: #fff;
+      padding: 10px;
+    }
+
+    td {
+      padding: 8px 12px;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: Consolas, monospace;
+    }
+
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      overflow-x: auto;
+      border-left: 4px solid #2a4d69;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2em 0;
+    }
+
+    .section-divider {
+      margin-top: 2em;
+      border-top: 3px solid #2a4d69;
+    }
+
+    a {
+      color: #2a4d69;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
+      background: #fffbe6;
+      border-left: 4px solid #f5b700;
+      padding: 10px 15px;
+      margin: 1em 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>📅 Week 5: Styling a Complete Web Page</h1>
+  <p><strong>Duration:</strong> 3 to 5 hours (Recommended: 2 sessions — 1 for learning, 1 for project)</p>
+
+  <h2>🎯 Objectives</h2>
+  <ul>
+    <li>Structure a full HTML page using semantic elements</li>
+    <li>Apply external CSS to style all parts of a web page</li>
+    <li>Build simple layouts using <strong>Flexbox</strong> and <strong>media queries</strong></li>
+    <li>Understand the basics of responsive design</li>
+    <li>Complete a <strong>mini project</strong> (e.g., personal portfolio or landing page)</li>
+  </ul>
+
+  <div class="section-divider"></div>
+
+  <h2>🧩 Topics Covered</h2>
+
+  <h3>1️⃣ Structuring a Complete HTML Page</h3>
+  <ul>
+    <li>Use semantic HTML elements: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code></li>
+    <li>Set up proper document structure with <code>&lt;head&gt;</code> including:
+      <ul>
+        <li><code>&lt;meta charset="UTF-8"&gt;</code></li>
+        <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></li>
+        <li><code>&lt;title&gt;</code>, <code>&lt;link&gt;</code> for CSS</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>2️⃣ Applying Global Styles with External CSS</h3>
+  <ul>
+    <li>Create and link <code>style.css</code></li>
+    <li>Define base styles (font, background, spacing)</li>
+    <li>Use a CSS reset or normalize technique</li>
+    <li>Include fonts from <a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
+  </ul>
+
+  <h3>3️⃣ Styling Key Sections</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Page Section</th>
+        <th>Style Focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Header</td>
+        <td>Background color, padding, text alignment</td>
+      </tr>
+      <tr>
+        <td>Navigation</td>
+        <td>Flexbox layout, hover effects, links</td>
+      </tr>
+      <tr>
+        <td>Main Content</td>
+        <td>Font styles, spacing, headings</td>
+      </tr>
+      <tr>
+        <td>Images</td>
+        <td>Sizes, border-radius, object-fit</td>
+      </tr>
+      <tr>
+        <td>Footer</td>
+        <td>Alignment, background, color</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4️⃣ Using Flexbox for Layout</h3>
+  <p>Example usage:</p>
+  <pre><code>.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+
+  <h3>5️⃣ Basic Responsive Design (Media Queries)</h3>
+  <p>Media query example:</p>
+  <pre><code>@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+}</code></pre>
+
+  <ul>
+    <li>Make layout adapt to smaller screens</li>
+    <li>Adjust font sizes, spacing, or image width</li>
+  </ul>
+
+  <div class="section-divider"></div>
+
+  <h2>🧪 Activities & Final Project</h2>
+
+  <h3>✅ In-Class Project (Code-Along)</h3>
+  <p>Build a complete page with:</p>
+  <ul>
+    <li><strong>Header</strong> with logo/title</li>
+    <li><strong>Navigation menu</strong></li>
+    <li><strong>Main section</strong> with 2–3 content blocks</li>
+    <li><strong>Sidebar</strong> or About Section</li>
+    <li><strong>Footer</strong></li>
+  </ul>
+
+  <h3>✅ Individual Mini Project (Portfolio or Landing Page)</h3>
+  <p><strong>Requirements:</strong></p>
+  <ul>
+    <li>Use semantic HTML5 structure</li>
+    <li>Use at least 3 CSS selectors: element, class, ID</li>
+    <li>Include:
+      <ul>
+        <li>Header, Nav, Main, Footer</li>
+        <li>1 image</li>
+        <li>1 form</li>
+        <li>Flexbox layout</li>
+        <li>Responsive behavior using media queries</li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><strong>Optional Add-ons:</strong></p>
+  <ul>
+    <li>Google Fonts or Font Awesome</li>
+    <li>Transitions or hover effects</li>
+  </ul>
+
+  <div class="highlight">
+    💡 Tip: Encourage students to personalize the mini project — let them showcase hobbies, a resume, or a fictional product page!
+  </div>
+
+  <h3>📝 Homework / Practice</h3>
+  <ul>
+    <li>Finish your mini project (due next class)</li>
+    <li>Host on GitHub Pages or share local files</li>
+    <li>Write 2–3 sentences: What did you learn?</li>
+  </ul>
+
+  <h3>📂 Deliverables</h3>
+  <ul>
+    <li><code>index.html</code></li>
+    <li><code>style.css</code></li>
+    <li>Optional: images folder</li>
+    <li>Link or zipped folder submission</li>
+  </ul>
+
+  <div class="section-divider"></div>
+
+  <h2>🎉 Wrap-Up & Feedback</h2>
+  <ul>
+    <li>Final project showcase (10–15 mins)</li>
+    <li>Group Q&A discussion:
+      <ul>
+        <li>What was easy?</li>
+        <li>What was confusing?</li>
+        <li>What would you like to learn next?</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>✅ Optional: Certificates & Next Steps</h2>
+  <ul>
+    <li>Issue certificate of completion</li>
+    <li>Next recommendations:
+      <ul>
+        <li>Learn JavaScript</li>
+        <li>Explore Bootstrap</li>
+        <li>Try static site generators like Jekyll or Hugo</li>
+      </ul>
+    </li>
+  </ul>
+
+
+</body>
+</html>

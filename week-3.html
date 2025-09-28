@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 3: Introduction to CSS</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #222;
+      background: #fefefe;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    h1 {
+      border-bottom: 3px solid #003366;
+      padding-bottom: 8px;
+    }
+    h2 {
+      margin-top: 2em;
+      border-bottom: 2px solid #666;
+      padding-bottom: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0 2em 0;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background: #003366;
+      color: white;
+    }
+    ul {
+      margin-left: 1.5em;
+      list-style-type: disc;
+    }
+    pre {
+      background: #eee;
+      padding: 10px 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.95em;
+      border-radius: 3px;
+    }
+    a {
+      color: #00509e;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2em 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Week 3: Introduction to CSS</h1>
+    <p><strong>Duration:</strong> ~3 to 4 hours (Can be split into 2 sessions if needed)</p>
+  </header>
+
+  <section>
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Understand what CSS is and how it works alongside HTML</li>
+      <li>Apply CSS styles to HTML elements using inline, internal, and external methods</li>
+      <li>Use basic CSS selectors, properties, and values</li>
+      <li>Style text, colors, backgrounds, and basic layouts</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🧩 Topics Covered</h2>
+
+    <article>
+      <h3>1️⃣ What is CSS?</h3>
+      <ul>
+        <li>CSS = Cascading Style Sheets</li>
+        <li>Separates content (HTML) from design (CSS)</li>
+        <li>Controls the look and formatting of web pages: colors, fonts, spacing, layout</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>2️⃣ How CSS Works</h3>
+      <ul>
+        <li>Browsers read HTML and CSS together to render styled pages</li>
+        <li>Cascading means styles can override each other based on specificity and order</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>3️⃣ Ways to Apply CSS</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Inline CSS</td>
+            <td>Inside an element's tag</td>
+            <td><code>&lt;p style="color:blue;"&gt;Text&lt;/p&gt;</code></td>
+          </tr>
+          <tr>
+            <td>Internal CSS</td>
+            <td>Inside <code>&lt;style&gt;</code> tag in <code>&lt;head&gt;</code></td>
+            <td><code>&lt;style&gt; p { color: blue; } &lt;/style&gt;</code></td>
+          </tr>
+          <tr>
+            <td>External CSS</td>
+            <td>Separate <code>.css</code> file linked to HTML</td>
+            <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article>
+      <h3>4️⃣ Basic CSS Syntax</h3>
+      <pre><code>selector {
+  property: value;
+}</code></pre>
+      <p>Example:</p>
+      <pre><code>h1 {
+  color: red;
+  font-size: 32px;
+}</code></pre>
+    </article>
+
+    <article>
+      <h3>5️⃣ CSS Selectors</h3>
+      <ul>
+        <li>Element selector (e.g., <code>p</code>, <code>h1</code>)</li>
+        <li>Class selector (e.g., <code>.classname</code>)</li>
+        <li>ID selector (e.g., <code>#idname</code>)</li>
+        <li>Grouping selectors (<code>h1, h2, p</code>)</li>
+        <li>Descendant selectors (<code>div p</code>)</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>6️⃣ Common CSS Properties</h3>
+      <ul>
+        <li><strong>Color and Backgrounds</strong>
+          <ul>
+            <li><code>color</code></li>
+            <li><code>background-color</code></li>
+          </ul>
+        </li>
+        <li><strong>Text</strong>
+          <ul>
+            <li><code>font-family</code></li>
+            <li><code>font-size</code></li>
+            <li><code>font-weight</code></li>
+            <li><code>text-align</code></li>
+          </ul>
+        </li>
+        <li><strong>Box Model Basics</strong> (Intro to <code>margin</code>, <code>padding</code>, <code>border</code>, <code>width</code>, <code>height</code>)</li>
+        <li><strong>Display</strong> (<code>block</code>, <code>inline</code>, <code>inline-block</code>)</li>
+      </ul>
+    </article>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🧪 Activities / Exercises</h2>
+    <ul>
+      <li>Apply inline styles to a paragraph and heading</li>
+      <li>Add internal CSS in the <code>&lt;head&gt;</code> to style multiple elements</li>
+      <li>Create an external stylesheet and link it to an HTML page</li>
+      <li>Use class and ID selectors to style different parts of a page</li>
+      <li>Change font colors, sizes, and background colors</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>📝 Homework / Practice</h2>
+    <ul>
+      <li>Create an HTML page styled using an external CSS file</li>
+      <li>Use at least 3 different selectors (element, class, ID)</li>
+      <li>Style text color, font size, and background colors</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🛠️ Tools Needed</h2>
+    <ul>
+      <li>Code editor (VS Code recommended)</li>
+      <li>Browser with developer tools</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>📚 Additional Resources</h2>
+    <ul>
+      <li><a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">W3Schools CSS Tutorial</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank" rel="noopener">MDN CSS Basics</a></li>
+    </ul>
+  </section>
+
+
+
+</body>
+</html>

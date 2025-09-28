@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lesson 3: Getting Started with HTML</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+    h1, h2, h3 {
+      color: #2a4365;
+      margin-bottom: 0.3em;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.6em;
+    }
+    h2 {
+      margin-top: 2.4em;
+      font-size: 1.5rem;
+    }
+    p, ul, ol {
+      margin-bottom: 1em;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    code, pre {
+      font-family: 'Source Code Pro', monospace, monospace;
+      background-color: #e2e8f0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    pre {
+      padding: 12px 16px;
+      overflow-x: auto;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+    th, td {
+      border: 1px solid #cbd5e0;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #2b6cb0;
+      color: white;
+    }
+    blockquote {
+      background-color: #bee3f8;
+      border-left: 5px solid #3182ce;
+      margin: 1.5em 0;
+      padding: 1em 1.2em;
+      font-style: italic;
+      color: #2c5282;
+    }
+    a {
+      color: #2b6cb0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 3em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💻 Lesson 3: Getting Started with HTML</h1>
+
+  <div class="section">
+    <h2>🕒 Duration:</h2>
+    <p><strong>~45–60 minutes</strong> (Third segment of Week 1 — includes explanation + hands-on practice)</p>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Learning Objectives:</h2>
+    <ul>
+      <li>Understand what HTML is and what it's used for</li>
+      <li>Recognize the role of HTML in building websites</li>
+      <li>Set up a simple HTML file using a text editor</li>
+      <li>Write and view a basic HTML page in a browser</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧩 Topics Covered:</h2>
+  </div>
+
+  <div class="section">
+    <h3>📌 3.1 What is HTML?</h3>
+    <ul>
+      <li><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong></li>
+      <li>It defines the <strong>structure and content</strong> of web pages</li>
+      <li>HTML uses <strong>tags</strong> (also called elements) to describe parts of a webpage</li>
+      <li>It's the <strong>foundation</strong> of all websites</li>
+    </ul>
+    <blockquote>
+      📌 <strong>HyperText</strong> = text with links (hyperlinks)<br/>
+      📌 <strong>Markup Language</strong> = uses tags to “mark up” text to give it structure
+    </blockquote>
+  </div>
+
+  <div class="section">
+    <h3>⚙️ 3.2 What Does HTML Do?</h3>
+    <p>HTML tells the browser <strong>what to display</strong>, such as:</p>
+    <ul>
+      <li>Headings</li>
+      <li>Paragraphs</li>
+      <li>Links</li>
+      <li>Images</li>
+      <li>Lists</li>
+      <li>Tables</li>
+      <li>Forms</li>
+    </ul>
+    <p><em>It does <strong>not</strong> control appearance — that’s what CSS is for.</em></p>
+  </div>
+
+  <div class="section">
+    <h3>🛠️ 3.3 Setting Up: First HTML Page</h3>
+
+    <h4>✔ Tools Needed:</h4>
+    <ul>
+      <li>A text editor (e.g., <strong>Visual Studio Code</strong>)</li>
+      <li>A browser (e.g., Chrome, Firefox)</li>
+    </ul>
+
+    <h4>🗂 Folder &amp; File Setup:</h4>
+    <p>Create a folder named <code>my-first-website</code>, and inside it, create a file called:</p>
+    <pre>index.html</pre>
+
+    <h4>✍ First HTML Example:</h4>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+
+  <div class="section">
+    <h3>🔍 3.4 Explanation of Structure:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&lt;!DOCTYPE html&gt;</code></td>
+          <td>Declares the document is HTML5</td>
+        </tr>
+        <tr>
+          <td><code>&lt;html&gt;</code></td>
+          <td>Root element of the page</td>
+        </tr>
+        <tr>
+          <td><code>&lt;head&gt;</code></td>
+          <td>Metadata (not displayed in browser window)</td>
+        </tr>
+        <tr>
+          <td><code>&lt;title&gt;</code></td>
+          <td>Title of the page (seen in browser tab)</td>
+        </tr>
+        <tr>
+          <td><code>&lt;body&gt;</code></td>
+          <td>Visible content of the webpage</td>
+        </tr>
+        <tr>
+          <td><code>&lt;h1&gt;</code></td>
+          <td>Heading (largest)</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;</code></td>
+          <td>Paragraph</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>🧪 Activities / Practice</h2>
+
+    <h4>✅ Activity 1: Code-Along</h4>
+    <p>Students type the example HTML code in their own <code>index.html</code>, save it, and open it in their browser.</p>
+
+    <h4>✅ Activity 2: Modify Your Page</h4>
+    <p>Ask students to:</p>
+    <ul>
+      <li>Change the <code>&lt;title&gt;</code></li>
+      <li>Add another heading (<code>&lt;h2&gt;</code>)</li>
+      <li>Add a second paragraph</li>
+      <li>Add their name to the page</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📝 Key Takeaways:</h2>
+    <ul>
+      <li>HTML is the language used to <strong>structure</strong> content on the web</li>
+      <li>Every web page starts with basic tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code></li>
+      <li>You can write HTML in any text editor and view it in a browser</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📚 Optional Extension:</h2>
+    <p>Introduce online playgrounds like:</p>
+    <ul>
+      <li><a href="https://codepen.io/" target="_blank" rel="noopener noreferrer">CodePen</a></li>
+      <li><a href="https://jsfiddle.net/" target="_blank" rel="noopener noreferrer">JSFiddle</a></li>
+      <li><a href="https://jsbin.com/" target="_blank" rel="noopener noreferrer">JSBin</a></li>
+    </ul>
+    <p>This helps students who can’t install editors or want to test on the go.</p>
+  </div>
+
+  <div class="section">
+    <h2>❓ What would you like next?</h2>
+    <ul>
+      <li>A <strong>code starter file</strong> you can distribute</li>
+      <li>A <strong>step-by-step slide deck</strong></li>
+      <li>An <strong>HTML cheat sheet</strong> for your students</li>
+    </ul>
+    <p>Just say the word and I’ll prepare it for you!</p>
+  </div>
+
+</body>
+</html>

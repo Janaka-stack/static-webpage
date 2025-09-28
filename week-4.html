@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Week 4: CSS Box Model & Layout</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #222;
+      background: #fefefe;
+    }
+    h1, h2, h3 {
+      color: #2a4d69;
+    }
+    h1 {
+      border-bottom: 3px solid #2a4d69;
+      padding-bottom: 8px;
+    }
+    h2 {
+      margin-top: 2em;
+      border-bottom: 2px solid #888;
+      padding-bottom: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0 2em 0;
+    }
+    th, td {
+      border: 1px solid #888;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th {
+      background: #2a4d69;
+      color: white;
+    }
+    ul {
+      margin-left: 1.5em;
+      list-style-type: disc;
+    }
+    pre {
+      background: #eee;
+      padding: 10px 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+      font-size: 0.95em;
+      border-radius: 3px;
+    }
+    a {
+      color: #1b3b72;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2em 0;
+    }
+    /* Visual box model diagram placeholder */
+    .box-model-diagram {
+      width: 320px;
+      margin: 1.5em auto;
+      padding: 10px;
+      border: 3px solid #2a4d69;
+      position: relative;
+      background: #fafafa;
+    }
+    .box-model-diagram .content {
+      background: #cce5ff;
+      padding: 40px;
+      border: 4px solid #007bff;
+      margin: 20px;
+    }
+    .box-model-label {
+      font-weight: bold;
+      color: #2a4d69;
+      margin: 5px 0 15px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Week 4: CSS Box Model &amp; Layout</h1>
+    <p><strong>Duration:</strong> ~3 to 4 hours (Can be split into 2 sessions)</p>
+  </header>
+
+  <section>
+    <h2>🎯 Objectives</h2>
+    <ul>
+      <li>Understand the CSS Box Model and its components</li>
+      <li>Use margin, padding, border, and content to control spacing and sizing</li>
+      <li>Apply basic layout techniques using display, width, height, and positioning</li>
+      <li>Create simple page layouts with block, inline, inline-block, and flexbox basics</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🧩 Topics Covered</h2>
+
+    <article>
+      <h3>
+        <a href="box.html" target="_blank" rel="noopener noreferrer">
+          1️⃣ Understanding the CSS Box Model
+        </a>
+      </h3>
+      <p>Every HTML element is a box consisting of:</p>
+      <ul>
+        <li><strong>Content</strong> (text, images, etc.)</li>
+        <li><strong>Padding</strong> (space inside the box, around content)</li>
+        <li><strong>Border</strong> (surrounds padding and content)</li>
+        <li><strong>Margin</strong> (space outside the border, separates from other elements)</li>
+      </ul>
+      <p class="box-model-label">Visual Diagram (conceptual)</p>
+      <div class="box-model-diagram" aria-label="CSS box model diagram">
+        <div class="content">Content area (text, images)</div>
+      </div>
+    </article>
+
+    <article>
+      <h3>2️⃣ Properties of the Box Model</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>margin</code></td>
+            <td>Space outside the element’s border</td>
+            <td><code>margin: 10px;</code></td>
+          </tr>
+          <tr>
+            <td><code>padding</code></td>
+            <td>Space inside the element, around content</td>
+            <td><code>padding: 15px;</code></td>
+          </tr>
+          <tr>
+            <td><code>border</code></td>
+            <td>Thickness and style of the border</td>
+            <td><code>border: 2px solid black;</code></td>
+          </tr>
+          <tr>
+            <td><code>width</code></td>
+            <td>Width of the content area</td>
+            <td><code>width: 300px;</code></td>
+          </tr>
+          <tr>
+            <td><code>height</code></td>
+            <td>Height of the content area</td>
+            <td><code>height: 150px;</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <article>
+      <h3>3️⃣ Box Sizing</h3>
+      <ul>
+        <li>Default is <code>box-sizing: content-box;</code> (width and height apply to content only)</li>
+        <li><code>box-sizing: border-box;</code> includes padding and border in width and height calculations</li>
+        <li>Using <code>border-box</code> often simplifies layout</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>4️⃣ Display Property</h3>
+      <ul>
+        <li><code>block</code>: Elements take full width, start on a new line (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>)</li>
+        <li><code>inline</code>: Elements flow within a line, width/height ignored (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>)</li>
+        <li><code>inline-block</code>: Like inline but respects width/height</li>
+        <li><code>none</code>: Hide element</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>5️⃣ Positioning Basics</h3>
+      <ul>
+        <li><code>static</code> (default)</li>
+        <li><code>relative</code></li>
+        <li><code>absolute</code></li>
+        <li><code>fixed</code></li>
+        <li>Basic examples and use-cases for each</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>6️⃣ Introduction to Flexbox (Basic Layout)</h3>
+      <ul>
+        <li>What is flexbox? Flexible box layout for arranging items</li>
+        <li>Container with <code>display: flex;</code></li>
+        <li>Basic properties: <code>justify-content</code>, <code>align-items</code></li>
+        <li>Simple horizontal layout example</li>
+      </ul>
+    </article>
+
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🧪 Activities / Exercises</h2>
+    <ul>
+      <li>Create boxes with different padding, margin, and border, observe effects</li>
+      <li>Use <code>box-sizing</code> property and compare results</li>
+      <li>Change display properties of elements and see layout changes</li>
+      <li>Create a simple navigation bar using flexbox for horizontal menu</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>📝 Homework / Practice</h2>
+    <ul>
+      <li>Build a small webpage layout applying the box model concepts</li>
+      <li>Include at least 3 boxes with different margin, padding, and border settings</li>
+      <li>Use flexbox to create a responsive navigation bar or a simple card layout</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>🛠️ Tools Needed</h2>
+    <ul>
+      <li>Code editor (VS Code)</li>
+      <li>Browser with Developer Tools (Chrome DevTools, Firefox Developer Edition)</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>📚 Additional Resources</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model" target="_blank" rel="noopener">CSS Box Model - MDN</a></li>
+      <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener">A Complete Guide to Flexbox - CSS-Tricks</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>
